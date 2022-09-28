@@ -1,6 +1,6 @@
 <template>
   <button
-    class="hover:text-sky-400 flex items-center py-2 px-3 rounded-md space-x-1 transition duration-150"
+    class="hover:text-sky-400 flex items-center py-2 px-3 rounded-md space-x-1 transition duration-150 border"
     type="button"
     @click="modal = true"
   >
@@ -8,7 +8,7 @@
     Todos
   </button>
   <div
-    class="overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full bg-black bg-opacity-40 flex"
+    class="overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full bg-black bg-opacity-40 flex ml-0"
     :class="modal ? '' : 'hidden'"
   >
     <div class="relative p-4 w-full max-w-2xl h-full md:h-auto m-auto">
