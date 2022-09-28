@@ -3,18 +3,21 @@
     class="h-16 bg-white border-b-gray-200 border-b flex items-center px-4 justify-between sticky top-0 z-10"
   >
     <h1 class="text-xl font-medium">Research Vite + Vue 3 + Tailwind</h1>
-    <div class="flex space-x-6 menu">
+    <div class="flex space-x-2 menu">
       <router-link
-        class="hover:text-sky-400"
+        class="hover:text-sky-400 flex items-center py-2 px-3 rounded-md space-x-1 transition duration-150"
         v-for="(menu, i) in data.menus"
         :key="i"
         :to="{ name: menu.page }"
         @click="selectedMenu = menu.name"
-        :class="selectedMenu == menu.name ? 'text-sky-600 font-medium' : ''"
-        >{{ menu.name }}</router-link
+        :class="selectedMenu == menu.name ? 'text-sky-600  bg-sky-100' : ''"
       >
+        <i :class="`ci-${menu.icon}`"></i>
+        <span>
+          {{ menu.name }}
+        </span>
+      </router-link>
     </div>
-    <i class="ci-message_round"></i>
   </div>
 </template>
 
@@ -26,18 +29,22 @@ const data = reactive({
     {
       name: "Posts",
       page: "Posts",
+      icon: "note",
     },
     {
       name: "Photos",
       page: "Photos",
+      icon: "image",
     },
     {
       name: "Todos",
       page: "Todos",
+      icon: "list_check",
     },
     {
       name: "User",
       page: "User",
+      icon: "group",
     },
   ],
 });
