@@ -13,16 +13,18 @@
         :class="selectedMenu == menu.name ? 'text-sky-600  bg-sky-100' : ''"
       >
         <i :class="`ci-${menu.icon}`"></i>
-        <span>
+        <span class="uppercase text-sm">
           {{ menu.name }}
         </span>
       </router-link>
+      <modal-dialog />
     </div>
   </div>
 </template>
 
 <script setup>
 import { reactive, ref } from "@vue/reactivity";
+import ModalDialog from "./ModalDialog.vue";
 const selectedMenu = ref("User");
 const data = reactive({
   menus: [
@@ -36,11 +38,11 @@ const data = reactive({
       page: "Photos",
       icon: "image",
     },
-    {
-      name: "Todos",
-      page: "Todos",
-      icon: "list_check",
-    },
+    // {
+    //   name: "Todos",
+    //   page: "Todos",
+    //   icon: "list_check",
+    // },
     {
       name: "User",
       page: "User",

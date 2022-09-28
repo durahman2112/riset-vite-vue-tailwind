@@ -1,12 +1,14 @@
 import { createStore } from 'vuex'
 import user from "./modules/user";
 import photos from "./modules/photos";
+import todos from "./modules/todos";
 
 // Create a new store instance.
 const store = createStore({
   modules: {
     user,
-    photos
+    photos,
+    todos,
   },
   state() {
     return {
