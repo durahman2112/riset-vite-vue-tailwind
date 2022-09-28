@@ -7,7 +7,12 @@
       v-for="(image, i) in photos"
       :key="i"
     >
-      <img :src="image.url" alt="" srcset="" />
+      <img
+        :src="`https://picsum.photos/id/${image.id}/200/200`"
+        class="rounded-md"
+        alt=""
+        srcset=""
+      />
     </div>
   </div>
 </template>

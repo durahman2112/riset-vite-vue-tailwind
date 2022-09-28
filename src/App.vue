@@ -7,7 +7,7 @@
     test
   </div>
   <div
-    class="max-w-8xl mx-auto px-4 sm:px-6 md:px-8"
+    class="max-w-8xl mx-auto px-4 sm:px-6 md:px-8 bg-gray-50 min-h-screen"
     style="margin-left: 15rem"
   >
     <h1 class="text-3xl font-semibold p-4">{{ this.$route.name }}</h1>
