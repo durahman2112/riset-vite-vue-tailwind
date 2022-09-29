@@ -29,12 +29,13 @@
         </div>
       </div>
       <div class="col-span-6">
-        <img
+        <TigaJs />
+        <!-- <img
           src="https://images.unsplash.com/photo-1481026469463-66327c86e544?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=608&q=80"
           alt=""
           srcset=""
           class="rounded-xl"
-        />
+        /> -->
       </div>
     </div>
   </div>
@@ -42,6 +43,7 @@
 
 <script setup>
 import AppBarLanding from "../components/landingpage/AppBarLanding.vue";
+import TigaJs from "../components/landingpage/TigaJs.vue";
 </script>
 
 <style></style>
