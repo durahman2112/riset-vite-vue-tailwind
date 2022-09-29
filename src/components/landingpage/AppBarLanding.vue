@@ -24,10 +24,10 @@
     </div>
     <!-- <modal-dialog /> -->
     <button
-      class="hover:text-sky-400 flex items-center py-2 px-5 rounded-md space-x-1 transition duration-150 border"
+      class="hover:text-white hover:bg-sky-600 flex items-center py-2 px-6 rounded-md space-x-1 transition duration-150 border"
       type="button"
     >
-      Masuk
+      Log In
     </button>
   </div>
 </template>

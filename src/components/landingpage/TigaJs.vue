@@ -5,7 +5,7 @@
 <script setup>
 import * as THREE from "three";
 
-import Stats from "three/addons/libs/stats.module.js";
+// import Stats from "three/addons/libs/stats.module.js";
 
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { RoomEnvironment } from "three/addons/environments/RoomEnvironment.js";
@@ -20,8 +20,8 @@ onMounted(() => {
   const clock = new THREE.Clock();
   const container = document.getElementById("container");
 
-  const stats = new Stats();
-  container.appendChild(stats.dom);
+  // const stats = new Stats();
+  // container.appendChild(stats.dom);
 
   const renderer = new THREE.WebGLRenderer({ antialias: true });
   renderer.setPixelRatio(window.devicePixelRatio);
@@ -38,12 +38,7 @@ onMounted(() => {
     0.04
   ).texture;
 
-  const camera = new THREE.PerspectiveCamera(
-    40,
-    window.innerWidth / window.innerWidth,
-    1,
-    100
-  );
+  const camera = new THREE.PerspectiveCamera(40, 400 / 400, 1, 100);
   camera.position.set(5, 2, 8);
 
   const controls = new OrbitControls(camera, renderer.domElement);
@@ -77,10 +72,10 @@ onMounted(() => {
   );
 
   window.onresize = function () {
-    camera.aspect = window.innerWidth / window.innerWidth;
+    camera.aspect = 400 / 400;
     camera.updateProjectionMatrix();
 
-    renderer.setSize(window.innerWidth, window.innerWidth);
+    renderer.setSize(400, 400);
   };
 
   function animate() {
@@ -92,7 +87,7 @@ onMounted(() => {
 
     controls.update();
 
-    stats.update();
+    // stats.update();
 
     renderer.render(scene, camera);
   }

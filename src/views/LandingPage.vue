@@ -2,7 +2,7 @@
   <AppBarLanding />
   <div class="container md:px-24 mt-8">
     <div class="grid grid-cols-12">
-      <div class="col-span-6">
+      <div class="md:col-span-6 col-span-12 order-1 md:order-1 pt-10">
         <h1 class="text-7xl font-bold" style="line-height: 84px">
           Lorem ipsum dolor consectetur sit amet
         </h1>
@@ -28,16 +28,52 @@
           </button>
         </div>
       </div>
-      <div class="col-span-6">
+      <div class="md:col-span-6 col-span-12 order-2 md:order-2 pt-10">
         <TigaJs />
-        <!-- <img
-          src="https://images.unsplash.com/photo-1481026469463-66327c86e544?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=608&q=80"
-          alt=""
-          srcset=""
-          class="rounded-xl"
-        /> -->
       </div>
     </div>
+    <div
+      class="bg-sky-900 text-white w-full rounded-xl p-10 grid grid-cols-12 mt-28"
+    >
+      <div class="md:col-span-5 col-span-12 flex justify-end relative">
+        <img
+          src="../assets/image/landing-2.svg"
+          alt=""
+          srcset=""
+          width="500"
+          class="absolute left-0"
+          style="bottom: -2.5rem"
+        />
+      </div>
+      <div class="md:col-span-7 col-span-12">
+        <p class="font-semibold text-3xl" style="line-hight: 50px">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia
+          totam dicta illo?
+        </p>
+        <p class="text-gray-300 text-lg mt-6" style="line-hight: 30px">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus
+          assumenda placeat eveniet earum ullam! Nemo ipsa impedit quidem,
+          dolorem nobis non eos voluptatibus et magnam fuga explicabo quaerat
+          quod facere doloribus. Commodi necessitatibus earum sapiente nihil,
+          error explicabo?
+        </p>
+        <div class="flex items-center space-x-10 mt-6">
+          <div class="flex flex-col items-star">
+            <p class="text-3xl font-semibold">12K+</p>
+            <p class="text-gray-300 text-lg">Users</p>
+          </div>
+          <div class="flex flex-col items-star">
+            <p class="text-3xl font-semibold">240+</p>
+            <p class="text-gray-300 text-lg">Projects</p>
+          </div>
+          <div class="flex flex-col items-star">
+            <p class="text-3xl font-semibold">93%</p>
+            <p class="text-gray-300 text-lg">Positive Ratings</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="h-32"></div>
   </div>
 </template>
 
